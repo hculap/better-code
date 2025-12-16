@@ -1,0 +1,23 @@
+{
+  "name": "tdd-dev",
+  "version": "0.1.8",
+  "description": "Transform Claude Code into a strict TDD practitioner that enforces Red→Green→Refactor cycles",
+  "keywords": [
+    "claude-code-plugin",
+    "tdd",
+    "test-driven-development",
+    "testing",
+    "red-green-refactor",
+    "quality"
+  ],
+  "author": "Szymon Paluch",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hculap/tdd-dev.git"
+  },
+  "homepage": "https://github.com/hculap/tdd-dev#readme",
+  "bugs": {
+    "url": "https://github.com/hculap/tdd-dev/issues"
+  }
+}

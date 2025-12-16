@@ -1,0 +1,12 @@
+# Local Claude settings
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+.idea/
+.vscode/

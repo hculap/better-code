@@ -1,0 +1,32 @@
+{
+  "name": "better-code",
+  "owner": {
+    "name": "Szymon Paluch"
+  },
+  "plugins": [
+    {
+      "name": "tdd-dev",
+      "source": "./plugins/tdd-dev",
+      "description": "Transform Claude Code into a strict TDD practitioner that enforces Red→Green→Refactor cycles",
+      "version": "0.1.7",
+      "author": {
+        "name": "Szymon Paluch"
+      },
+      "repository": "https://github.com/hculap/better-code",
+      "license": "MIT",
+      "keywords": ["tdd", "test-driven-development", "testing", "red-green-refactor", "quality"]
+    },
+    {
+      "name": "n1-optimizer",
+      "source": "./plugins/n1-optimizer",
+      "description": "Parallel performance analysis tool that identifies N+1 queries, inefficient APIs, and suboptimal code patterns",
+      "version": "0.1.3",
+      "author": {
+        "name": "Szymon Paluch"
+      },
+      "repository": "https://github.com/hculap/better-code",
+      "license": "MIT",
+      "keywords": ["performance", "n+1", "optimization", "database", "api", "analysis"]
+    }
+  ]
+}
