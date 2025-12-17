@@ -5,5 +5,11 @@
   "author": {
     "name": "Szymon Paluch"
   },
-  "keywords": ["tdd", "test-driven-development", "testing", "red-green-refactor", "quality"]
+  "repository": "https://github.com/hculap/better-code",
+  "homepage": "https://github.com/hculap/better-code#readme",
+  "license": "MIT",
+  "keywords": ["tdd", "test-driven-development", "testing", "red-green-refactor", "quality"],
+  "agents": [
+    "./agents/tdd-developer.md"
+  ]
 }
