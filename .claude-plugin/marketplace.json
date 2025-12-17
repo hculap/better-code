@@ -27,6 +27,18 @@
       "repository": "https://github.com/hculap/better-code",
       "license": "MIT",
       "keywords": ["performance", "n+1", "optimization", "database", "api", "analysis"]
+    },
+    {
+      "name": "readme-writer",
+      "source": "./plugins/readme-writer",
+      "description": "Generate and audit perfect READMEs using the PRD-README v1 standard",
+      "version": "0.1.0",
+      "author": {
+        "name": "Szymon Paluch"
+      },
+      "repository": "https://github.com/hculap/better-code",
+      "license": "MIT",
+      "keywords": ["readme", "documentation", "prd-readme", "developer-experience"]
     }
   ]
 }
