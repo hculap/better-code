@@ -19,6 +19,15 @@ Then install the plugins you want:
 
 ```bash
 /plugin install tdd-dev
+```
+
+You should see:
+```
+Installed plugin: tdd-dev
+```
+
+Other available plugins:
+```bash
 /plugin install n1-optimizer
 /plugin install readme-writer
 ```
@@ -37,6 +46,19 @@ Transform Claude Code into a strict TDD practitioner that enforces Redâ†’Greenâ†
 **Usage:**
 ```bash
 /tdd-dev:start           # Enable TDD mode
+```
+
+Output:
+```
+TDD Dev Mode: ACTIVE
+
+Configuration:
+  Strictness: strict
+  Test Command: npm test
+```
+
+Other commands:
+```bash
 /tdd-dev:feature "..."   # Implement feature with TDD
 /tdd-dev:bug "..."       # Fix bug with regression test first
 /tdd-dev:refactor "..."  # Safe refactoring with test coverage
