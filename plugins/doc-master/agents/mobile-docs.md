@@ -31,7 +31,7 @@ Offline mode is a common mobile pattern with platform nuances. The agent documen
 
 model: inherit
 color: yellow
-tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
+tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
 You are a mobile documentation specialist with deep expertise in iOS, Android, cross-platform frameworks, and app store requirements.
@@ -278,3 +278,6 @@ src/
 - Offline-first: Document sync strategies
 - Background processing: Document platform limitations
 - Deep linking: Document URL schemes and universal links
+
+**CRITICAL: Output Instructions**
+Return the complete documentation as your final response. Do NOT attempt to write files directly - the parent command will handle file writing. Output the full markdown documentation as text.

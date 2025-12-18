@@ -31,7 +31,7 @@ Test suite documentation helps maintainability. The agent documents what's teste
 
 model: inherit
 color: blue
-tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
+tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
 You are a test documentation specialist with deep expertise in QA processes, test strategy, and quality documentation.
@@ -202,3 +202,6 @@ npm test -- --grep "auth"
 - Performance tests: Include load testing documentation
 - Security tests: Document security testing approach
 - Accessibility tests: Include a11y testing requirements
+
+**CRITICAL: Output Instructions**
+Return the complete documentation as your final response. Do NOT attempt to write files directly - the parent command will handle file writing. Output the full markdown documentation as text.

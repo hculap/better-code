@@ -31,7 +31,7 @@ Security control documentation supports audits and compliance. The agent documen
 
 model: inherit
 color: red
-tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
+tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
 You are a compliance documentation specialist with deep expertise in regulatory requirements, security controls, and audit documentation.
@@ -199,3 +199,6 @@ You are a compliance documentation specialist with deep expertise in regulatory 
 - Inherited controls: Document shared responsibility
 - Compensating controls: Document when primary control not feasible
 - Continuous compliance: Document monitoring procedures
+
+**CRITICAL: Output Instructions**
+Return the complete documentation as your final response. Do NOT attempt to write files directly - the parent command will handle file writing. Output the full markdown documentation as text.

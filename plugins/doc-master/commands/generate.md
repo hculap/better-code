@@ -73,7 +73,7 @@ Collect all information needed for documentation:
 - Related documentation
 - Error cases and edge cases
 
-### Step 5: Generate Documentation
+### Step 5: Spawn Documentation Agent
 
 **CRITICAL: You MUST use the Task tool to spawn the appropriate specialized agent.** Do NOT generate documentation yourself - delegate to the domain-specific agent.
 
@@ -93,9 +93,21 @@ Example Task tool call:
 Task(
   subagent_type="doc-master:backend-docs",
   description="Document user service",
-  prompt="Generate reference documentation for the user service at src/services/user.ts. Include all public methods, parameters, return types, and examples."
+  prompt="Generate reference documentation for the user service at src/services/user.ts. Include all public methods, parameters, return types, and examples. Return the complete documentation as your response - do NOT write files."
 )
 ```
+
+**IMPORTANT**: The agent will return documentation as text output. Capture the task_id from the Task tool response.
+
+### Step 6: Wait for Agent Output
+
+Use TaskOutput to wait for the agent to complete and capture the generated documentation:
+
+```
+TaskOutput(task_id: [task-id-from-step-5], block: true, timeout: 300000)
+```
+
+The agent will return the complete documentation content as text. This content will be used in Step 8 to write the file.
 
 The spawned agent will generate documentation following these guidelines:
 
@@ -126,9 +138,9 @@ The spawned agent will generate documentation following these guidelines:
 - Trade-offs and alternatives
 - Connections to other concepts
 
-### Step 6: Apply Standards
+### Step 7: Apply Standards
 
-Apply configured documentation standard:
+Review the documentation returned by the agent and verify it follows the configured standard:
 
 **Diátaxis:**
 - Ensure document fits one quadrant only
@@ -145,13 +157,22 @@ Apply configured documentation standard:
 - Use required templates
 - Follow terminology guidelines
 
-### Step 7: Output
+### Step 8: Write Documentation
 
-1. Display generated documentation in console
-2. Ask user to review
-3. Offer to save to file:
-   - Suggest appropriate path
-   - Or use `--output` path
+**CRITICAL: You MUST write the documentation to a file.** Do NOT just display it.
+
+1. Determine output path:
+   - Use `--output` path if provided
+   - Otherwise, suggest appropriate path based on project structure and document type
+   - Ask user to confirm path
+
+2. Write the documentation:
+   - Use the Write tool to save the documentation content from Step 6
+   - Create parent directories if needed
+
+3. Confirm to user:
+   - Show the file path where documentation was saved
+   - Offer to open or preview the file
 
 ## Example Usage
 

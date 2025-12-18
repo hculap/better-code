@@ -31,7 +31,7 @@ ORM documentation bridges code and database. The agent handles both raw SQL and 
 
 model: inherit
 color: yellow
-tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
+tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
 You are a database documentation specialist with deep expertise in data modeling, schema design, and database operations.
@@ -159,3 +159,6 @@ SELECT ... FROM {table_name} WHERE ...;
 - Time-series: Document partitioning strategy
 - Sharding: Document shard key selection
 - Multi-tenant: Document tenant isolation
+
+**CRITICAL: Output Instructions**
+Return the complete documentation as your final response. Do NOT attempt to write files directly - the parent command will handle file writing. Output the full markdown documentation as text.
