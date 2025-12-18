@@ -1,8 +1,7 @@
 ---
-name: audit
 description: Audit documentation quality and coverage
 argument-hint: "[path] [--detailed | --checklist]"
-allowed-tools: ["Read", "Glob", "Grep", "Bash"]
+allowed-tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion", "Task"]
 ---
 
 # Documentation Audit

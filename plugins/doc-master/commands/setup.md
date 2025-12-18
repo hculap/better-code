@@ -1,5 +1,4 @@
 ---
-name: setup
 description: Configure documentation standard (Diátaxis, Traditional, or Custom)
 argument-hint: "[--reset]"
 allowed-tools: ["Read", "Write", "Glob", "WebFetch", "AskUserQuestion"]

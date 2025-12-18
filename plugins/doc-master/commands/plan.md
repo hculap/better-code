@@ -1,8 +1,7 @@
 ---
-name: plan
 description: Generate documentation plan for project or feature
 argument-hint: "[scope]"
-allowed-tools: ["Read", "Glob", "Grep", "Bash", "Write", "AskUserQuestion"]
+allowed-tools: ["Read", "Glob", "Grep", "Bash", "Write", "AskUserQuestion", "Task"]
 ---
 
 # Documentation Plan Generator

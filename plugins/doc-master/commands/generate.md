@@ -1,5 +1,4 @@
 ---
-name: generate
 description: Generate documentation for specific feature or component
 argument-hint: "<feature> [--type tutorial|howto|reference|explanation] [--output path]"
 allowed-tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion", "Task"]

@@ -1,6 +1,6 @@
 {
   "name": "doc-master",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Comprehensive documentation toolkit with specialized agents for bulletproof software documentation across backend, frontend, API, database, architecture, tests, user guides, compliance, and mobile domains.",
   "author": {
     "name": "Szymon Paluch"
