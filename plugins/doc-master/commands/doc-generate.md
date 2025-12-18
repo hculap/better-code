@@ -2,7 +2,7 @@
 name: generate
 description: Generate documentation for specific feature or component
 argument-hint: "<feature> [--type tutorial|howto|reference|explanation] [--output path]"
-allowed-tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
+allowed-tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion", "Task"]
 ---
 
 # Documentation Generator
@@ -76,7 +76,29 @@ Collect all information needed for documentation:
 
 ### Step 5: Generate Documentation
 
-Use the appropriate domain agent to generate documentation:
+**CRITICAL: You MUST use the Task tool to spawn the appropriate specialized agent.** Do NOT generate documentation yourself - delegate to the domain-specific agent.
+
+Use the Task tool with the appropriate `subagent_type`:
+- `doc-master:backend-docs` - For backend/service documentation
+- `doc-master:frontend-docs` - For frontend/component documentation
+- `doc-master:api-docs` - For API/endpoint documentation
+- `doc-master:database-docs` - For database/schema documentation
+- `doc-master:architecture-docs` - For architecture/design documentation
+- `doc-master:test-docs` - For test strategy documentation
+- `doc-master:user-guide-docs` - For end-user documentation
+- `doc-master:compliance-docs` - For compliance/security documentation
+- `doc-master:mobile-docs` - For mobile app documentation
+
+Example Task tool call:
+```
+Task(
+  subagent_type="doc-master:backend-docs",
+  description="Document user service",
+  prompt="Generate reference documentation for the user service at src/services/user.ts. Include all public methods, parameters, return types, and examples."
+)
+```
+
+The spawned agent will generate documentation following these guidelines:
 
 **For Reference Documentation:**
 - Complete API signatures
