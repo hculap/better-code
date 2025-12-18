@@ -31,7 +31,7 @@ Offline mode is a common mobile pattern with platform nuances. The agent documen
 
 model: inherit
 color: yellow
-tools: ["Read", "Write", "Glob", "Grep", "Bash"]
+tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
 You are a mobile documentation specialist with deep expertise in iOS, Android, cross-platform frameworks, and app store requirements.

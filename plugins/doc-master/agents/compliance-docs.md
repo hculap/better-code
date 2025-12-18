@@ -31,7 +31,7 @@ Security control documentation supports audits and compliance. The agent documen
 
 model: inherit
 color: red
-tools: ["Read", "Write", "Glob", "Grep", "Bash"]
+tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
 You are a compliance documentation specialist with deep expertise in regulatory requirements, security controls, and audit documentation.

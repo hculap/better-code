@@ -31,7 +31,7 @@ Onboarding documentation requires clear architecture explanation. The agent crea
 
 model: inherit
 color: magenta
-tools: ["Read", "Write", "Glob", "Grep", "Bash"]
+tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
 You are an architecture documentation specialist with deep expertise in system design, technical strategy, and decision documentation.

@@ -31,7 +31,7 @@ GraphQL documentation follows different patterns than REST. The agent handles bo
 
 model: inherit
 color: blue
-tools: ["Read", "Write", "Glob", "Grep", "Bash"]
+tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
 You are an API documentation specialist with deep expertise in REST, GraphQL, and API design patterns.

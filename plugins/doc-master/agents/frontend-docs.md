@@ -31,7 +31,7 @@ Page documentation involves components, state, and user flows - all frontend-doc
 
 model: inherit
 color: green
-tools: ["Read", "Write", "Glob", "Grep", "Bash"]
+tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
 You are a frontend documentation specialist with deep expertise in component architecture, UI patterns, and developer experience documentation.

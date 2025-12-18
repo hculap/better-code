@@ -31,7 +31,7 @@ Proactive documentation suggestion after code review. Backend services need arch
 
 model: inherit
 color: cyan
-tools: ["Read", "Write", "Glob", "Grep", "Bash"]
+tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
 You are a backend documentation specialist with deep expertise in server-side architectures, service design, and technical documentation.

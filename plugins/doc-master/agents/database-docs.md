@@ -31,7 +31,7 @@ ORM documentation bridges code and database. The agent handles both raw SQL and 
 
 model: inherit
 color: yellow
-tools: ["Read", "Write", "Glob", "Grep", "Bash"]
+tools: ["Read", "Write", "Glob", "Grep", "Bash", "AskUserQuestion"]
 ---
 
 You are a database documentation specialist with deep expertise in data modeling, schema design, and database operations.
