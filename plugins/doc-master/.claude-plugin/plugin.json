@@ -1,0 +1,29 @@
+{
+  "name": "doc-master",
+  "version": "0.1.0",
+  "description": "Comprehensive documentation toolkit with specialized agents for bulletproof software documentation across backend, frontend, API, database, architecture, tests, user guides, compliance, and mobile domains.",
+  "author": {
+    "name": "Szymon Paluch"
+  },
+  "repository": "https://github.com/hculap/better-code",
+  "homepage": "https://github.com/hculap/better-code#readme",
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "diataxis",
+    "api-docs",
+    "technical-writing",
+    "software-docs"
+  ],
+  "agents": [
+    "./agents/backend-docs.md",
+    "./agents/frontend-docs.md",
+    "./agents/api-docs.md",
+    "./agents/database-docs.md",
+    "./agents/architecture-docs.md",
+    "./agents/test-docs.md",
+    "./agents/user-guide-docs.md",
+    "./agents/compliance-docs.md",
+    "./agents/mobile-docs.md"
+  ]
+}

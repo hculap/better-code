@@ -39,6 +39,18 @@
       "repository": "https://github.com/hculap/better-code",
       "license": "MIT",
       "keywords": ["readme", "documentation", "prd-readme", "developer-experience"]
+    },
+    {
+      "name": "doc-master",
+      "source": "./plugins/doc-master",
+      "description": "Comprehensive documentation toolkit with specialized agents for bulletproof software documentation",
+      "version": "0.1.0",
+      "author": {
+        "name": "Szymon Paluch"
+      },
+      "repository": "https://github.com/hculap/better-code",
+      "license": "MIT",
+      "keywords": ["documentation", "diataxis", "api-docs", "technical-writing", "software-docs"]
     }
   ]
 }
