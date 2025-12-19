@@ -30,6 +30,7 @@ Other available plugins:
 ```bash
 /plugin install n1-optimizer
 /plugin install readme-writer
+/plugin install doc-master
 ```
 
 ## Plugins
@@ -100,6 +101,36 @@ Generate and audit perfect READMEs using the PRD-README v1 standard.
 /readme-writer:generate  # Generate README from codebase
 /readme-writer:audit     # Audit existing README (score X/10)
 ```
+
+### doc-master
+
+Comprehensive documentation toolkit with 9 specialized agents for bulletproof software documentation.
+
+**Features:**
+- 9 domain-specific documentation agents (API, backend, frontend, database, architecture, tests, user guides, compliance, mobile)
+- Supports Diátaxis, Traditional, or Custom documentation frameworks
+- Generate and audit documentation for any codebase component
+
+**Usage:**
+```bash
+/doc-master:setup              # Configure documentation standard
+/doc-master:generate "feature" # Generate docs for a feature
+/doc-master:audit              # Audit existing documentation
+/doc-master:plan               # Create documentation plan
+```
+
+**Specialized Agents:**
+| Agent | Focus |
+|-------|-------|
+| api-docs | REST/GraphQL endpoints, schemas, auth |
+| backend-docs | Services, data flows, deployment |
+| frontend-docs | Components, state, accessibility |
+| database-docs | Schema, migrations, queries |
+| architecture-docs | System design, ADRs, diagrams |
+| test-docs | Test strategy, coverage, plans |
+| user-guide-docs | End-user tutorials, help articles |
+| compliance-docs | Security, audit, regulatory |
+| mobile-docs | iOS/Android, app store requirements |
 
 ## Contributing
 
