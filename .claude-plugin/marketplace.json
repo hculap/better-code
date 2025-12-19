@@ -44,7 +44,7 @@
       "name": "doc-master",
       "source": "./plugins/doc-master",
       "description": "Comprehensive documentation toolkit with specialized agents for bulletproof software documentation",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
         "name": "Szymon Paluch"
       },
