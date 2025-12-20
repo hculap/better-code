@@ -1,52 +1,48 @@
 # better-code
 
-A curated collection of Claude Code plugins focused on code quality and developer productivity.
+Claude Code plugins that enforce code quality practices: TDD workflows, performance analysis, and documentation standards.
 
-Status: active | [GitHub](https://github.com/hculap/better-code) | [Issues](https://github.com/hculap/better-code/issues)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen)
 
-## Installation
+**Status:** Active | [Documentation](docs/) | [Issues](https://github.com/hculap/better-code/issues) | [Changelog](https://github.com/hculap/better-code/commits/main)
 
+## What's Included
+
+| Plugin | Version | Purpose |
+|--------|---------|---------|
+| **tdd-dev** | 0.2.1 | Enforce Red→Green→Refactor TDD cycles |
+| **n1-optimizer** | 0.1.3 | Detect N+1 queries and performance issues |
+| **readme-writer** | 0.1.0 | Generate/audit READMEs with PRD-README v1 |
+| **doc-master** | 0.2.1 | 9 specialized documentation agents |
+
+## Quick Start
+
+**Prerequisites:** Claude Code CLI installed
+
+**Step 1: Add the marketplace**
 ```bash
 /plugin marketplace add hculap/better-code
 ```
 
-You should see:
+Output:
 ```
 Successfully added marketplace: better-code
 ```
 
-Then install the plugins you want:
-
+**Step 2: Install a plugin**
 ```bash
 /plugin install tdd-dev
 ```
 
-You should see:
+Output:
 ```
 Installed plugin: tdd-dev
 ```
 
-Other available plugins:
+**Step 3: Use the plugin**
 ```bash
-/plugin install n1-optimizer
-/plugin install readme-writer
-/plugin install doc-master
-```
-
-## Plugins
-
-### tdd-dev
-
-Transform Claude Code into a strict TDD practitioner that enforces Red→Green→Refactor cycles.
-
-**Features:**
-- Enforces writing tests before implementation
-- Tracks TDD cycle state (Red/Green/Refactor)
-- Provides TDD-specific commands and workflows
-
-**Usage:**
-```bash
-/tdd-dev:start           # Enable TDD mode
+/tdd-dev:start
 ```
 
 Output:
@@ -58,84 +54,137 @@ Configuration:
   Test Command: npm test
 ```
 
-Other commands:
+That's it! You're now coding with TDD enforcement.
+
+## Usage
+
+### tdd-dev: Test-Driven Development
+
+Enforces writing tests before implementation code.
+
 ```bash
-/tdd-dev:feature "..."   # Implement feature with TDD
-/tdd-dev:bug "..."       # Fix bug with regression test first
-/tdd-dev:refactor "..."  # Safe refactoring with test coverage
+/tdd-dev:start              # Enable TDD mode
+/tdd-dev:feature "add auth" # Implement feature with TDD
+/tdd-dev:bug "fix #123"     # Fix bug with regression test first
+/tdd-dev:refactor           # Safe refactoring verified by tests
+/tdd-dev:stop               # Disable TDD mode
 ```
 
-### n1-optimizer
+**Strictness levels:** `strict` (tests required), `standard` (tests encouraged), `relaxed` (minimal enforcement)
 
-Parallel performance analysis tool that identifies N+1 queries, inefficient APIs, and suboptimal code patterns.
+### n1-optimizer: Performance Analysis
 
-**Features:**
-- 4 parallel agents analyze different layers simultaneously
-- Detects N+1 queries, O(n²) algorithms, over-fetching
-- Auto-detects tech stack and applies appropriate patterns
+Runs 4 parallel agents to analyze your codebase for performance issues.
 
-**Usage:**
 ```bash
-/n1-optimizer:analyze    # Run full performance analysis
+/n1-optimizer:analyze
 ```
 
-**Analysis Layers:**
+Output:
+```
+Analysis Complete
+
+Database Layer: 3 issues found
+  HIGH: N+1 query in UserService.getOrders() - src/services/user.ts:45
+
+Backend Layer: 1 issue found
+  MEDIUM: Sequential awaits could be parallelized - src/api/reports.ts:23
+
+Frontend Layer: 2 issues found
+  HIGH: Missing React.memo on ExpensiveList - src/components/List.tsx:12
+
+API Layer: 1 issue found
+  MEDIUM: Missing pagination on /api/products - src/routes/products.ts:8
+```
+
+| Agent | Detects |
+|-------|---------|
+| Database | N+1 queries, missing indexes, unbatched writes |
+| Backend | O(n²) algorithms, blocking I/O, memory issues |
+| Frontend | Re-render loops, large bundles, missing memoization |
+| API | Over-fetching, missing pagination, chatty endpoints |
+
+### readme-writer: README Generation
+
+Generate or audit READMEs following the PRD-README v1 standard.
+
+```bash
+/readme-writer:generate      # Generate README from codebase analysis
+/readme-writer:audit         # Score existing README (0-10)
+```
+
+Audit output:
+```
+README Audit Score: 7/10
+
+✓ Test 1: What is it? - PASS
+✓ Test 2: Is it maintained? - PASS
+✗ Test 3: Quickstart works - FAIL (missing expected output)
+...
+```
+
+### doc-master: Documentation Toolkit
+
+9 specialized agents for comprehensive documentation.
+
+```bash
+/doc-master:setup            # Choose framework (Diátaxis/Traditional/Custom)
+/doc-master:generate "API"   # Generate API documentation
+/doc-master:audit            # Audit existing docs
+/doc-master:plan             # Create documentation plan
+```
+
 | Agent | Focus |
 |-------|-------|
-| Database | N+1 queries, missing indexes, inefficient JOINs |
-| Backend | Algorithm complexity, blocking ops, memory leaks |
-| Frontend | Re-renders, bundle size, state management |
-| API | Over-fetching, pagination, endpoint design |
-
-### readme-writer
-
-Generate and audit perfect READMEs using the PRD-README v1 standard.
-
-**Features:**
-- Auto-detect project context from codebase analysis
-- 9-step README generation process
-- 10-point audit with scoring and auto-fix
-
-**Usage:**
-```bash
-/readme-writer:generate  # Generate README from codebase
-/readme-writer:audit     # Audit existing README (score X/10)
-```
-
-### doc-master
-
-Comprehensive documentation toolkit with 9 specialized agents for bulletproof software documentation.
-
-**Features:**
-- 9 domain-specific documentation agents (API, backend, frontend, database, architecture, tests, user guides, compliance, mobile)
-- Supports Diátaxis, Traditional, or Custom documentation frameworks
-- Generate and audit documentation for any codebase component
-
-**Usage:**
-```bash
-/doc-master:setup              # Configure documentation standard
-/doc-master:generate "feature" # Generate docs for a feature
-/doc-master:audit              # Audit existing documentation
-/doc-master:plan               # Create documentation plan
-```
-
-**Specialized Agents:**
-| Agent | Focus |
-|-------|-------|
-| api-docs | REST/GraphQL endpoints, schemas, auth |
+| api-docs | REST/GraphQL endpoints, schemas |
 | backend-docs | Services, data flows, deployment |
-| frontend-docs | Components, state, accessibility |
-| database-docs | Schema, migrations, queries |
-| architecture-docs | System design, ADRs, diagrams |
-| test-docs | Test strategy, coverage, plans |
-| user-guide-docs | End-user tutorials, help articles |
+| frontend-docs | Components, state management |
+| database-docs | Schema, migrations, ER diagrams |
+| architecture-docs | System design, ADRs |
+| test-docs | Test strategy, coverage |
+| user-guide-docs | Tutorials, help articles |
 | compliance-docs | Security, audit, regulatory |
-| mobile-docs | iOS/Android, app store requirements |
+| mobile-docs | iOS/Android, app stores |
+
+## Documentation
+
+Full documentation available in [docs/](docs/):
+
+- [Getting Started Tutorial](docs/tutorials/getting-started.md)
+- [Configuration Reference](docs/reference/configuration.md)
+- [TDD Commands Reference](docs/reference/tdd-dev-commands.md)
+- [Performance Patterns Reference](docs/reference/n1-optimizer-patterns.md)
 
 ## Contributing
 
-Issues and pull requests welcome. Please file an issue first to discuss proposed changes.
+Contributions welcome! Please [open an issue](https://github.com/hculap/better-code/issues/new) first to discuss proposed changes.
+
+**Quick steps:**
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Open a pull request
+
+See individual plugin READMEs for plugin-specific guidance.
+
+## Support
+
+- **Questions:** [Open a discussion](https://github.com/hculap/better-code/discussions)
+- **Bugs:** [File an issue](https://github.com/hculap/better-code/issues/new?template=bug_report.md)
+- **Feature requests:** [File an issue](https://github.com/hculap/better-code/issues/new?template=feature_request.md)
+
+When reporting bugs, include:
+- Plugin name and version
+- Claude Code version
+- Steps to reproduce
+- Expected vs actual behavior
+
+## Security
+
+To report security vulnerabilities, please email the maintainer directly rather than opening a public issue.
 
 ## License
 
-MIT - see [LICENSE](LICENSE)
+MIT License - see [LICENSE](LICENSE) for details.
+
+Copyright (c) 2024 Szymon Paluch
