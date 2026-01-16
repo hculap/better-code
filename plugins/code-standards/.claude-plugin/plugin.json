@@ -1,0 +1,20 @@
+{
+  "name": "code-standards",
+  "version": "0.1.0",
+  "description": "Enforce practical code quality standards with concrete rules of thumb for file sizes, function lengths, complexity, and best practices",
+  "author": {
+    "name": "Szymon Paluch"
+  },
+  "repository": "https://github.com/hculap/better-code",
+  "license": "MIT",
+  "keywords": [
+    "code-quality",
+    "best-practices",
+    "clean-code",
+    "linting",
+    "refactoring",
+    "code-review"
+  ],
+  "agents": ["./agents/code-standards-enforcer.md"],
+  "homepage": "https://github.com/hculap/better-code#readme"
+}

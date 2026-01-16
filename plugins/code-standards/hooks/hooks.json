@@ -1,0 +1,18 @@
+{
+  "description": "Code standards enforcement hooks - triggers analysis after file modifications when enabled",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "A file was just modified. Follow these steps:\n\n1. **Check settings file**: Look for `.claude/code-standards.local.md`\n   - If file does not exist → return nothing (analysis disabled by default)\n\n2. **Validate YAML format**: Check the frontmatter delimiters and syntax\n   - If malformed YAML → return systemMessage: 'Warning: code-standards settings file has invalid YAML. Run /code-standards:init to fix.'\n\n3. **Check active_analysis setting**: Look for `active_analysis: true` in YAML frontmatter\n   - If not enabled → return nothing\n\n4. **Check file extension**: Is the modified file a source code file?\n   - Source extensions: .ts, .tsx, .js, .jsx, .py, .go, .java, .rb, .rs, .php, .swift, .kt, .cs\n   - If not a source file → return nothing\n\n5. **Return suggestion**: If all checks pass, return a systemMessage suggesting to use the code-standards-enforcer agent to analyze the file.\n\nThe tool result shows what file was modified: $TOOL_RESULT",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "timeoutNote": "Hooks have a 15-second timeout. For large files, the hook returns early with a suggestion to run `/code-standards:check` manually."
+}

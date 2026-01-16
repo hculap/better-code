@@ -51,6 +51,18 @@
       "repository": "https://github.com/hculap/better-code",
       "license": "MIT",
       "keywords": ["documentation", "diataxis", "api-docs", "technical-writing", "software-docs"]
+    },
+    {
+      "name": "code-standards",
+      "source": "./plugins/code-standards",
+      "description": "Enforce practical code quality standards with concrete rules of thumb for file sizes, function lengths, complexity, and best practices",
+      "version": "0.1.0",
+      "author": {
+        "name": "Szymon Paluch"
+      },
+      "repository": "https://github.com/hculap/better-code",
+      "license": "MIT",
+      "keywords": ["code-quality", "best-practices", "clean-code", "linting", "refactoring", "code-review"]
     }
   ]
 }

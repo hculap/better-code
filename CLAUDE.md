@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a monorepo of Claude Code plugins focused on code quality and developer productivity. The marketplace name is `better-code` and contains 4 plugins: tdd-dev, n1-optimizer, readme-writer, and doc-master.
+This is a monorepo of Claude Code plugins focused on code quality and developer productivity. The marketplace name is `better-code` and contains 5 plugins: tdd-dev, n1-optimizer, readme-writer, doc-master, and code-standards.
 
 ## Development Commands
 
@@ -26,6 +26,7 @@ plugins/
   n1-optimizer/                   # Parallel performance analysis (4 agents)
   readme-writer/                  # README generation/auditing
   doc-master/                     # Documentation toolkit (9 agents)
+  code-standards/                 # Code quality enforcement
 ```
 
 ## Plugin Architecture
