@@ -57,11 +57,13 @@ Optional markdown content below the frontmatter for project-specific notes.
 
 The PostToolUse hook in `hooks/hooks.json` triggers after Write/Edit operations:
 
-1. **Check settings file**: Look for `.claude/code-standards.local.md`
-2. **Validate YAML**: Return warning if malformed
-3. **Check `active_analysis`**: Must be `true` to continue
-4. **Check file extension**: Must be a recognized source file
-5. **Suggest analysis**: Return systemMessage to use code-standards-enforcer agent
+1. **Check settings file**: Look for `.claude/code-standards.local.md` with `active_analysis: true`
+   - If missing or not enabled → return empty JSON `{}` (silent, no interruption)
+2. **Check file extension**: Must be a recognized source file
+   - If not a source file → return empty JSON `{}` (silent, no interruption)
+3. **Suggest analysis**: If all checks pass, return `{"systemMessage": "..."}` to suggest using the code-standards-enforcer agent
+
+**Important**: The hook must return ONLY valid JSON to avoid interrupting the main agent's workflow. Never output explanatory text.
 
 Recognized source extensions: `.ts`, `.tsx`, `.js`, `.jsx`, `.py`, `.go`, `.java`, `.rb`, `.rs`, `.php`, `.swift`, `.kt`, `.cs`
 
@@ -91,10 +93,10 @@ claude --plugin-dir plugins/code-standards
 | `config` edit mode | Updates specified setting |
 | `init` fresh setup | Creates settings file with user choices |
 | `init --reconfigure` | Overwrites existing settings |
-| Hook: source file edit (active) | Suggests running enforcer agent |
-| Hook: source file edit (inactive) | No message |
-| Hook: non-source file edit | No message |
-| Hook: malformed YAML | Returns warning message |
+| Hook: source file edit (active) | Returns JSON with systemMessage suggesting enforcer agent |
+| Hook: source file edit (inactive) | Returns empty JSON `{}`, no interruption |
+| Hook: non-source file edit | Returns empty JSON `{}`, no interruption |
+| Hook: missing settings file | Returns empty JSON `{}`, no interruption |
 
 ## File Naming Conventions
 
