@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "A file was just modified. Silently check if code-standards analysis should be suggested.\n\nIMPORTANT: You must return ONLY valid JSON or nothing at all. Never output explanatory text.\n\n1. Check if `.claude/code-standards.local.md` exists with `active_analysis: true` in YAML frontmatter\n   - If file missing or setting not true → return empty JSON: {}\n\n2. Check file extension from $TOOL_RESULT\n   - Source extensions: .ts, .tsx, .js, .jsx, .py, .go, .java, .rb, .rs, .php, .swift, .kt, .cs\n   - If not a source file → return empty JSON: {}\n\n3. If all checks pass, return: {\"systemMessage\": \"Consider running the code-standards-enforcer agent to analyze this file.\"}\n\nReturn ONLY the JSON object, no other text. Modified file info: $TOOL_RESULT",
+            "prompt": "A file was just modified. Silently check if code-standards analysis should be suggested.\n\nCRITICAL: Your ENTIRE response must be ONLY one of these two JSON objects - NO other text, NO explanations:\n- {} \n- {\"systemMessage\": \"Consider running /code-standards:check on this file.\"}\n\nLogic:\n1. Extract file path from $TOOL_RESULT\n2. Check extension - ONLY these are source files: .ts .tsx .js .jsx .py .go .java .rb .rs .php .swift .kt .cs\n3. If NOT a source extension → respond with ONLY: {}\n4. If source file, check if `.claude/code-standards.local.md` exists with `active_analysis: true`\n5. If missing or not true → respond with ONLY: {}\n6. If all checks pass → respond with ONLY: {\"systemMessage\": \"Consider running /code-standards:check on this file.\"}\n\nFile info: $TOOL_RESULT",
             "timeout": 15
           }
         ]
