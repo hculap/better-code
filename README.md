@@ -183,6 +183,10 @@ When reporting bugs, include:
 
 To report security vulnerabilities, please email the maintainer directly rather than opening a public issue.
 
+## Author
+
+Made by [Szymon Paluch](https://szymonpaluch.com), who builds AI systems that run in production. He also made [Workflow Studio](https://szymonpaluch.com/workflow-studio/), a dashboard and no-code builder for Claude Code Workflow runs.
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
