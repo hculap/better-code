@@ -1,43 +1,43 @@
 ---
 name: readme-analyzer
-description: Use this agent when the user asks to "write a readme", "create readme", "generate readme", "improve readme", "audit readme", "review readme", "fix my readme", "readme help", or mentions README quality, documentation improvements, or needs help with project documentation. This agent proactively analyzes codebases to understand project context for README generation or auditing.
+description: |
+  Use this agent when the user asks to "write a readme", "create readme", "generate readme", "improve readme", "audit readme", "review readme", "fix my readme", "readme help", or mentions README quality, documentation improvements, or needs help with project documentation. This agent proactively analyzes codebases to understand project context for README generation or auditing.
 
-<example>
-Context: User is working on a new project and needs documentation.
-user: "Can you help me create a README for this project?"
-assistant: "I'll use the readme-analyzer agent to analyze your codebase and generate a README following the PRD-README v1 standard."
-<commentary>
-User explicitly asked for README creation. Agent analyzes codebase to auto-detect target reader, job-to-be-done, and generate appropriate content.
-</commentary>
-</example>
+  <example>
+  Context: User is working on a new project and needs documentation.
+  user: "Can you help me create a README for this project?"
+  assistant: "I'll use the readme-analyzer agent to analyze your codebase and generate a README following the PRD-README v1 standard."
+  <commentary>
+  User explicitly asked for README creation. Agent analyzes codebase to auto-detect target reader, job-to-be-done, and generate appropriate content.
+  </commentary>
+  </example>
 
-<example>
-Context: User has an existing README but wants to improve it.
-user: "My README feels incomplete. What's missing?"
-assistant: "Let me use the readme-analyzer agent to audit your README against the PRD-README v1 standard and identify gaps."
-<commentary>
-User's README needs improvement. Agent will run acceptance tests and provide prioritized fixes.
-</commentary>
-</example>
+  <example>
+  Context: User has an existing README but wants to improve it.
+  user: "My README feels incomplete. What's missing?"
+  assistant: "Let me use the readme-analyzer agent to audit your README against the PRD-README v1 standard and identify gaps."
+  <commentary>
+  User's README needs improvement. Agent will run acceptance tests and provide prioritized fixes.
+  </commentary>
+  </example>
 
-<example>
-Context: User just finished a feature and wants documentation.
-user: "I've finished the API. Now I need to document it in the README."
-assistant: "I'll use the readme-analyzer agent to analyze your API implementation and help document it properly in the README."
-<commentary>
-User needs to add documentation for new functionality. Agent analyzes code to understand what to document.
-</commentary>
-</example>
+  <example>
+  Context: User just finished a feature and wants documentation.
+  user: "I've finished the API. Now I need to document it in the README."
+  assistant: "I'll use the readme-analyzer agent to analyze your API implementation and help document it properly in the README."
+  <commentary>
+  User needs to add documentation for new functionality. Agent analyzes code to understand what to document.
+  </commentary>
+  </example>
 
-<example>
-Context: Proactive trigger after user creates a new project.
-user: "Initialize a new React project called my-app"
-assistant: "I've initialized your React project. Would you like me to use the readme-analyzer agent to generate a README following the PRD-README v1 standard?"
-<commentary>
-Agent can be offered proactively when a new project is created without documentation.
-</commentary>
-</example>
-
+  <example>
+  Context: Proactive trigger after user creates a new project.
+  user: "Initialize a new React project called my-app"
+  assistant: "I've initialized your React project. Would you like me to use the readme-analyzer agent to generate a README following the PRD-README v1 standard?"
+  <commentary>
+  Agent can be offered proactively when a new project is created without documentation.
+  </commentary>
+  </example>
 model: inherit
 color: cyan
 tools: ["Read", "Glob", "Grep", "Bash"]

@@ -1,10 +1,12 @@
 {
   "name": "readme-writer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate and audit perfect READMEs using the PRD-README v1 standard",
   "author": {
     "name": "Szymon Paluch"
   },
+  "repository": "https://github.com/hculap/better-code",
+  "homepage": "https://github.com/hculap/better-code#readme",
   "license": "MIT",
   "keywords": ["readme", "documentation", "prd-readme", "developer-experience"]
 }

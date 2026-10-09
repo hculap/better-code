@@ -3,12 +3,13 @@
   "owner": {
     "name": "Szymon Paluch"
   },
+  "description": "A curated collection of Claude Code plugins for code quality and developer productivity",
   "plugins": [
     {
       "name": "tdd-dev",
       "source": "./plugins/tdd-dev",
       "description": "Transform Claude Code into a strict TDD practitioner that enforces Red→Green→Refactor cycles",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "author": {
         "name": "Szymon Paluch"
       },
@@ -32,7 +33,7 @@
       "name": "readme-writer",
       "source": "./plugins/readme-writer",
       "description": "Generate and audit perfect READMEs using the PRD-README v1 standard",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": {
         "name": "Szymon Paluch"
       },
@@ -44,7 +45,7 @@
       "name": "doc-master",
       "source": "./plugins/doc-master",
       "description": "Comprehensive documentation toolkit with specialized agents for bulletproof software documentation",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "author": {
         "name": "Szymon Paluch"
       },

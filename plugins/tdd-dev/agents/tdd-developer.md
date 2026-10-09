@@ -17,60 +17,59 @@ description: |
 
   Examples:
 
-<example>
-Context: User has activated TDD mode with /tdd-dev:start and now requests a feature.
-user: "Add pagination to the user list endpoint"
-assistant: [First asks user about planning preference using AskUserQuestion, then proceeds based on response]
-<commentary>
-TDD mode is active. Agent MUST first ask about planning preference before reading any files or writing any code.
-</commentary>
-</example>
+  <example>
+  Context: User has activated TDD mode with /tdd-dev:start and now requests a feature.
+  user: "Add pagination to the user list endpoint"
+  assistant: [First asks user about planning preference using AskUserQuestion, then proceeds based on response]
+  <commentary>
+  TDD mode is active. Agent MUST first ask about planning preference before reading any files or writing any code.
+  </commentary>
+  </example>
 
-<example>
-Context: User invokes the feature command explicitly.
-user: "/tdd-dev:feature Add email validation to the registration form"
-assistant: [First asks user about planning preference using AskUserQuestion, then proceeds based on response]
-<commentary>
-Explicit TDD command. Agent MUST first ask about planning preference before any other action.
-</commentary>
-</example>
+  <example>
+  Context: User invokes the feature command explicitly.
+  user: "/tdd-dev:feature Add email validation to the registration form"
+  assistant: [First asks user about planning preference using AskUserQuestion, then proceeds based on response]
+  <commentary>
+  Explicit TDD command. Agent MUST first ask about planning preference before any other action.
+  </commentary>
+  </example>
 
-<example>
-Context: User reports a bug while TDD mode is active.
-user: "The login function doesn't handle empty passwords correctly"
-assistant: [First asks user about planning preference using AskUserQuestion, then proceeds based on response]
-<commentary>
-Bug fix in TDD mode. Agent MUST first ask about planning preference before any other action.
-</commentary>
-</example>
+  <example>
+  Context: User reports a bug while TDD mode is active.
+  user: "The login function doesn't handle empty passwords correctly"
+  assistant: [First asks user about planning preference using AskUserQuestion, then proceeds based on response]
+  <commentary>
+  Bug fix in TDD mode. Agent MUST first ask about planning preference before any other action.
+  </commentary>
+  </example>
 
-<example>
-Context: User uses the bug command.
-user: "/tdd-dev:bug Users can submit forms with invalid dates"
-assistant: [First asks user about planning preference using AskUserQuestion, then proceeds based on response]
-<commentary>
-Explicit bug command. Agent MUST first ask about planning preference before any other action.
-</commentary>
-</example>
+  <example>
+  Context: User uses the bug command.
+  user: "/tdd-dev:bug Users can submit forms with invalid dates"
+  assistant: [First asks user about planning preference using AskUserQuestion, then proceeds based on response]
+  <commentary>
+  Explicit bug command. Agent MUST first ask about planning preference before any other action.
+  </commentary>
+  </example>
 
-<example>
-Context: User already completed one TDD task and now asks for another feature in the same session.
-user: "Now add markdown rendering to the chat component"
-assistant: [Spawns tdd-developer agent - TDD mode is still active from earlier]
-<commentary>
-CRITICAL: Even for subsequent requests in the same session, ALWAYS use tdd-developer when TDD mode is active. Never handle coding requests directly.
-</commentary>
-</example>
+  <example>
+  Context: User already completed one TDD task and now asks for another feature in the same session.
+  user: "Now add markdown rendering to the chat component"
+  assistant: [Spawns tdd-developer agent - TDD mode is still active from earlier]
+  <commentary>
+  CRITICAL: Even for subsequent requests in the same session, ALWAYS use tdd-developer when TDD mode is active. Never handle coding requests directly.
+  </commentary>
+  </example>
 
-<example>
-Context: User asks for a "simple" UI change while TDD mode is active.
-user: "Just add some CSS to make the button blue"
-assistant: [Spawns tdd-developer agent - ALL code changes go through TDD when mode is active]
-<commentary>
-No exceptions. Even "simple" changes use TDD when the mode is active. The agent decides if tests are needed, not the main assistant.
-</commentary>
-</example>
-
+  <example>
+  Context: User asks for a "simple" UI change while TDD mode is active.
+  user: "Just add some CSS to make the button blue"
+  assistant: [Spawns tdd-developer agent - ALL code changes go through TDD when mode is active]
+  <commentary>
+  No exceptions. Even "simple" changes use TDD when the mode is active. The agent decides if tests are needed, not the main assistant.
+  </commentary>
+  </example>
 model: inherit
 tools: Read, Write, Edit, Glob, Grep, Bash, TodoWrite, AskUserQuestion, EnterPlanMode, ExitPlanMode
 ---

@@ -1,34 +1,34 @@
 ---
 name: api-docs
-description: Use this agent when the user asks to "document API", "write API documentation", "document endpoints", "document REST API", "document GraphQL", "create API reference", "document webhooks", or needs documentation for HTTP endpoints, API schemas, authentication flows, or API integration guides.
+description: |
+  Use this agent when the user asks to "document API", "write API documentation", "document endpoints", "document REST API", "document GraphQL", "create API reference", "document webhooks", or needs documentation for HTTP endpoints, API schemas, authentication flows, or API integration guides.
 
-<example>
-Context: User has built a REST API
-user: "Document the users API endpoints"
-assistant: "I'll use the api-docs agent to create comprehensive API documentation covering all endpoints, request/response formats, authentication, and error codes."
-<commentary>
-API documentation requires specific format with endpoints, parameters, responses, and errors. The api-docs agent specializes in this structure.
-</commentary>
-</example>
+  <example>
+  Context: User has built a REST API
+  user: "Document the users API endpoints"
+  assistant: "I'll use the api-docs agent to create comprehensive API documentation covering all endpoints, request/response formats, authentication, and error codes."
+  <commentary>
+  API documentation requires specific format with endpoints, parameters, responses, and errors. The api-docs agent specializes in this structure.
+  </commentary>
+  </example>
 
-<example>
-Context: User is building a public API
-user: "I need developer documentation for our public API"
-assistant: "Let me use the api-docs agent to create developer-facing API documentation including authentication guides, endpoint references, rate limits, and SDK examples."
-<commentary>
-Public API docs need comprehensive coverage for external developers. The agent will create complete reference documentation.
-</commentary>
-</example>
+  <example>
+  Context: User is building a public API
+  user: "I need developer documentation for our public API"
+  assistant: "Let me use the api-docs agent to create developer-facing API documentation including authentication guides, endpoint references, rate limits, and SDK examples."
+  <commentary>
+  Public API docs need comprehensive coverage for external developers. The agent will create complete reference documentation.
+  </commentary>
+  </example>
 
-<example>
-Context: User has a GraphQL schema
-user: "Document our GraphQL API"
-assistant: "I'll use the api-docs agent to document your GraphQL schema, including types, queries, mutations, and usage examples."
-<commentary>
-GraphQL documentation follows different patterns than REST. The agent handles both API styles.
-</commentary>
-</example>
-
+  <example>
+  Context: User has a GraphQL schema
+  user: "Document our GraphQL API"
+  assistant: "I'll use the api-docs agent to document your GraphQL schema, including types, queries, mutations, and usage examples."
+  <commentary>
+  GraphQL documentation follows different patterns than REST. The agent handles both API styles.
+  </commentary>
+  </example>
 model: inherit
 color: blue
 tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]

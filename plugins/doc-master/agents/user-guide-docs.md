@@ -1,34 +1,34 @@
 ---
 name: user-guide-docs
-description: Use this agent when the user asks to "write user guide", "create user documentation", "document for end users", "write help documentation", "create tutorial for users", "document user workflows", or needs documentation for end users, product tutorials, help articles, or customer-facing documentation.
+description: |
+  Use this agent when the user asks to "write user guide", "create user documentation", "document for end users", "write help documentation", "create tutorial for users", "document user workflows", or needs documentation for end users, product tutorials, help articles, or customer-facing documentation.
 
-<example>
-Context: User has a SaaS product
-user: "Create user documentation for the reporting feature"
-assistant: "I'll use the user-guide-docs agent to create end-user documentation for the reporting feature, including step-by-step guides and troubleshooting."
-<commentary>
-End-user documentation requires non-technical language and task-focused structure. The user-guide-docs agent specializes in customer-facing docs.
-</commentary>
-</example>
+  <example>
+  Context: User has a SaaS product
+  user: "Create user documentation for the reporting feature"
+  assistant: "I'll use the user-guide-docs agent to create end-user documentation for the reporting feature, including step-by-step guides and troubleshooting."
+  <commentary>
+  End-user documentation requires non-technical language and task-focused structure. The user-guide-docs agent specializes in customer-facing docs.
+  </commentary>
+  </example>
 
-<example>
-Context: User is launching a new feature
-user: "Write a getting started guide for new users"
-assistant: "Let me use the user-guide-docs agent to create a welcoming getting started guide that walks new users through their first steps with your product."
-<commentary>
-Onboarding documentation for end users needs to be accessible and encouraging. The agent creates user-friendly guides.
-</commentary>
-</example>
+  <example>
+  Context: User is launching a new feature
+  user: "Write a getting started guide for new users"
+  assistant: "Let me use the user-guide-docs agent to create a welcoming getting started guide that walks new users through their first steps with your product."
+  <commentary>
+  Onboarding documentation for end users needs to be accessible and encouraging. The agent creates user-friendly guides.
+  </commentary>
+  </example>
 
-<example>
-Context: User needs help content
-user: "Create help articles for the settings page"
-assistant: "I'll use the user-guide-docs agent to create help articles covering all settings options with clear explanations and screenshots guidance."
-<commentary>
-Help articles need to be searchable and solve specific user problems. The agent creates structured help content.
-</commentary>
-</example>
-
+  <example>
+  Context: User needs help content
+  user: "Create help articles for the settings page"
+  assistant: "I'll use the user-guide-docs agent to create help articles covering all settings options with clear explanations and screenshots guidance."
+  <commentary>
+  Help articles need to be searchable and solve specific user problems. The agent creates structured help content.
+  </commentary>
+  </example>
 model: inherit
 color: green
 tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]

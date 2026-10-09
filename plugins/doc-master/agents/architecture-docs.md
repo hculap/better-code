@@ -1,34 +1,34 @@
 ---
 name: architecture-docs
-description: Use this agent when the user asks to "document architecture", "write architecture documentation", "create ADR", "document system design", "document design decisions", "create architecture diagram", "document infrastructure", or needs documentation for system architecture, design decisions, component interactions, or technical strategy.
+description: |
+  Use this agent when the user asks to "document architecture", "write architecture documentation", "create ADR", "document system design", "document design decisions", "create architecture diagram", "document infrastructure", or needs documentation for system architecture, design decisions, component interactions, or technical strategy.
 
-<example>
-Context: User is designing a new system
-user: "Document the architecture for our e-commerce platform"
-assistant: "I'll use the architecture-docs agent to create comprehensive architecture documentation including system diagrams, component responsibilities, and design decisions."
-<commentary>
-System architecture requires high-level documentation with diagrams and rationale. The architecture-docs agent specializes in technical strategy documentation.
-</commentary>
-</example>
+  <example>
+  Context: User is designing a new system
+  user: "Document the architecture for our e-commerce platform"
+  assistant: "I'll use the architecture-docs agent to create comprehensive architecture documentation including system diagrams, component responsibilities, and design decisions."
+  <commentary>
+  System architecture requires high-level documentation with diagrams and rationale. The architecture-docs agent specializes in technical strategy documentation.
+  </commentary>
+  </example>
 
-<example>
-Context: User made a significant technical decision
-user: "We decided to use event sourcing instead of CRUD. Can you document this decision?"
-assistant: "Let me use the architecture-docs agent to create an Architecture Decision Record (ADR) documenting the event sourcing decision, rationale, and implications."
-<commentary>
-ADRs are a specific architecture documentation format. The agent will create a proper decision record.
-</commentary>
-</example>
+  <example>
+  Context: User made a significant technical decision
+  user: "We decided to use event sourcing instead of CRUD. Can you document this decision?"
+  assistant: "Let me use the architecture-docs agent to create an Architecture Decision Record (ADR) documenting the event sourcing decision, rationale, and implications."
+  <commentary>
+  ADRs are a specific architecture documentation format. The agent will create a proper decision record.
+  </commentary>
+  </example>
 
-<example>
-Context: New team member needs system overview
-user: "Create a system overview document for onboarding"
-assistant: "I'll use the architecture-docs agent to create a comprehensive system overview including architecture diagrams, component descriptions, and key design decisions."
-<commentary>
-Onboarding documentation requires clear architecture explanation. The agent creates accessible yet thorough documentation.
-</commentary>
-</example>
-
+  <example>
+  Context: New team member needs system overview
+  user: "Create a system overview document for onboarding"
+  assistant: "I'll use the architecture-docs agent to create a comprehensive system overview including architecture diagrams, component descriptions, and key design decisions."
+  <commentary>
+  Onboarding documentation requires clear architecture explanation. The agent creates accessible yet thorough documentation.
+  </commentary>
+  </example>
 model: inherit
 color: magenta
 tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]

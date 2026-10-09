@@ -1,34 +1,34 @@
 ---
 name: database-docs
-description: Use this agent when the user asks to "document database", "document schema", "write database documentation", "document tables", "document migrations", "document data model", "document queries", or needs documentation for database schemas, entity relationships, migrations, or data access patterns.
+description: |
+  Use this agent when the user asks to "document database", "document schema", "write database documentation", "document tables", "document migrations", "document data model", "document queries", or needs documentation for database schemas, entity relationships, migrations, or data access patterns.
 
-<example>
-Context: User has a PostgreSQL database
-user: "Document our database schema"
-assistant: "I'll use the database-docs agent to create comprehensive schema documentation including tables, relationships, indexes, and data types."
-<commentary>
-Database schema documentation requires entity-relationship understanding. The database-docs agent specializes in data modeling documentation.
-</commentary>
-</example>
+  <example>
+  Context: User has a PostgreSQL database
+  user: "Document our database schema"
+  assistant: "I'll use the database-docs agent to create comprehensive schema documentation including tables, relationships, indexes, and data types."
+  <commentary>
+  Database schema documentation requires entity-relationship understanding. The database-docs agent specializes in data modeling documentation.
+  </commentary>
+  </example>
 
-<example>
-Context: User is setting up a new database
-user: "Document the user and orders tables and their relationships"
-assistant: "Let me use the database-docs agent to document these tables, including their columns, relationships, indexes, and common query patterns."
-<commentary>
-Table documentation with relationships is core database documentation. The agent will create complete schema docs.
-</commentary>
-</example>
+  <example>
+  Context: User is setting up a new database
+  user: "Document the user and orders tables and their relationships"
+  assistant: "Let me use the database-docs agent to document these tables, including their columns, relationships, indexes, and common query patterns."
+  <commentary>
+  Table documentation with relationships is core database documentation. The agent will create complete schema docs.
+  </commentary>
+  </example>
 
-<example>
-Context: User has ORM models
-user: "Create documentation for our Prisma models"
-assistant: "I'll use the database-docs agent to document your Prisma schema, including models, relations, and generated query methods."
-<commentary>
-ORM documentation bridges code and database. The agent handles both raw SQL and ORM patterns.
-</commentary>
-</example>
-
+  <example>
+  Context: User has ORM models
+  user: "Create documentation for our Prisma models"
+  assistant: "I'll use the database-docs agent to document your Prisma schema, including models, relations, and generated query methods."
+  <commentary>
+  ORM documentation bridges code and database. The agent handles both raw SQL and ORM patterns.
+  </commentary>
+  </example>
 model: inherit
 color: yellow
 tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]

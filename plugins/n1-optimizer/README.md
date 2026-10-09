@@ -51,9 +51,10 @@ Results are grouped by category with issue counts:
 ## Installation
 
 ```
-/plugin marketplace add hculap/n1-optimizer
-/plugin install n1-optimizer@n1-optimizer
+/plugin install n1-optimizer --marketplace hculap/better-code
 ```
+
+On Claude Code older than 2.1.275, add the marketplace first: `/plugin marketplace add hculap/better-code`, then `/plugin install n1-optimizer@better-code`.
 
 ### Local Development
 
