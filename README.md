@@ -11,10 +11,11 @@ Claude Code plugins that enforce code quality practices: TDD workflows, performa
 
 | Plugin | Version | Purpose |
 |--------|---------|---------|
-| **tdd-dev** | 0.2.1 | Enforce Red→Green→Refactor TDD cycles |
+| **tdd-dev** | 0.2.2 | Enforce Red→Green→Refactor TDD cycles |
 | **n1-optimizer** | 0.1.3 | Detect N+1 queries and performance issues |
-| **readme-writer** | 0.1.0 | Generate/audit READMEs with PRD-README v1 |
-| **doc-master** | 0.2.1 | 9 specialized documentation agents |
+| **readme-writer** | 0.1.1 | Generate/audit READMEs with PRD-README v1 |
+| **doc-master** | 0.2.2 | 9 specialized documentation agents |
+| **code-standards** | 0.1.0 | Enforce code quality rules of thumb (file size, function length, complexity) |
 
 ## Quick Start
 

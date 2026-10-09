@@ -18,9 +18,10 @@ Transform Claude Code from a general code generator into a strict Test-Driven De
 In Claude Code, run:
 
 ```
-/plugin marketplace add hculap/tdd-dev
-/plugin install tdd-dev@tdd-dev
+/plugin install tdd-dev --marketplace hculap/better-code
 ```
+
+On Claude Code older than 2.1.275, add the marketplace first: `/plugin marketplace add hculap/better-code`, then `/plugin install tdd-dev@better-code`.
 
 ### Local Development
 
