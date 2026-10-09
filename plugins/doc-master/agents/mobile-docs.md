@@ -1,34 +1,34 @@
 ---
 name: mobile-docs
-description: Use this agent when the user asks to "document mobile app", "write iOS documentation", "write Android documentation", "document React Native", "document Flutter", "document app store requirements", "document mobile features", or needs documentation for mobile applications, platform-specific features, or app store submissions.
+description: |
+  Use this agent when the user asks to "document mobile app", "write iOS documentation", "write Android documentation", "document React Native", "document Flutter", "document app store requirements", "document mobile features", or needs documentation for mobile applications, platform-specific features, or app store submissions.
 
-<example>
-Context: User is building a mobile app
-user: "Document the push notification implementation"
-assistant: "I'll use the mobile-docs agent to document your push notification implementation, covering both iOS and Android specifics, setup requirements, and testing procedures."
-<commentary>
-Mobile features often have platform-specific implementations. The mobile-docs agent handles cross-platform documentation.
-</commentary>
-</example>
+  <example>
+  Context: User is building a mobile app
+  user: "Document the push notification implementation"
+  assistant: "I'll use the mobile-docs agent to document your push notification implementation, covering both iOS and Android specifics, setup requirements, and testing procedures."
+  <commentary>
+  Mobile features often have platform-specific implementations. The mobile-docs agent handles cross-platform documentation.
+  </commentary>
+  </example>
 
-<example>
-Context: User is preparing for app store submission
-user: "Create documentation for our App Store submission"
-assistant: "Let me use the mobile-docs agent to create App Store submission documentation including metadata requirements, screenshots specs, and review guidelines compliance."
-<commentary>
-App store submissions have specific requirements. The agent documents what's needed for successful submission.
-</commentary>
-</example>
+  <example>
+  Context: User is preparing for app store submission
+  user: "Create documentation for our App Store submission"
+  assistant: "Let me use the mobile-docs agent to create App Store submission documentation including metadata requirements, screenshots specs, and review guidelines compliance."
+  <commentary>
+  App store submissions have specific requirements. The agent documents what's needed for successful submission.
+  </commentary>
+  </example>
 
-<example>
-Context: User has a React Native app
-user: "Document the offline mode feature"
-assistant: "I'll use the mobile-docs agent to document your offline mode implementation, including data sync strategy, storage approach, and platform considerations."
-<commentary>
-Offline mode is a common mobile pattern with platform nuances. The agent documents cross-platform implementations.
-</commentary>
-</example>
-
+  <example>
+  Context: User has a React Native app
+  user: "Document the offline mode feature"
+  assistant: "I'll use the mobile-docs agent to document your offline mode implementation, including data sync strategy, storage approach, and platform considerations."
+  <commentary>
+  Offline mode is a common mobile pattern with platform nuances. The agent documents cross-platform implementations.
+  </commentary>
+  </example>
 model: inherit
 color: yellow
 tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]

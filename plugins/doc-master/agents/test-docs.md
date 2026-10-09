@@ -1,34 +1,34 @@
 ---
 name: test-docs
-description: Use this agent when the user asks to "document tests", "write test documentation", "create test plan", "document test strategy", "document test coverage", "write QA documentation", or needs documentation for testing strategy, test plans, coverage requirements, or quality assurance processes.
+description: |
+  Use this agent when the user asks to "document tests", "write test documentation", "create test plan", "document test strategy", "document test coverage", "write QA documentation", or needs documentation for testing strategy, test plans, coverage requirements, or quality assurance processes.
 
-<example>
-Context: User is setting up testing for a project
-user: "Create a test plan for the checkout feature"
-assistant: "I'll use the test-docs agent to create a comprehensive test plan covering test cases, coverage requirements, and testing approach for the checkout feature."
-<commentary>
-Test plans require structured documentation of test cases and strategy. The test-docs agent specializes in QA documentation.
-</commentary>
-</example>
+  <example>
+  Context: User is setting up testing for a project
+  user: "Create a test plan for the checkout feature"
+  assistant: "I'll use the test-docs agent to create a comprehensive test plan covering test cases, coverage requirements, and testing approach for the checkout feature."
+  <commentary>
+  Test plans require structured documentation of test cases and strategy. The test-docs agent specializes in QA documentation.
+  </commentary>
+  </example>
 
-<example>
-Context: User needs to document testing approach
-user: "Document our testing strategy"
-assistant: "Let me use the test-docs agent to document your testing strategy including test types, coverage targets, and CI/CD integration."
-<commentary>
-Testing strategy documentation covers the overall QA approach. The agent will create comprehensive strategy docs.
-</commentary>
-</example>
+  <example>
+  Context: User needs to document testing approach
+  user: "Document our testing strategy"
+  assistant: "Let me use the test-docs agent to document your testing strategy including test types, coverage targets, and CI/CD integration."
+  <commentary>
+  Testing strategy documentation covers the overall QA approach. The agent will create comprehensive strategy docs.
+  </commentary>
+  </example>
 
-<example>
-Context: User completed a test suite
-user: "Document the tests I wrote for the auth module"
-assistant: "I'll use the test-docs agent to create documentation for your auth module tests, including test coverage, key test cases, and how to run them."
-<commentary>
-Test suite documentation helps maintainability. The agent documents what's tested and why.
-</commentary>
-</example>
-
+  <example>
+  Context: User completed a test suite
+  user: "Document the tests I wrote for the auth module"
+  assistant: "I'll use the test-docs agent to create documentation for your auth module tests, including test coverage, key test cases, and how to run them."
+  <commentary>
+  Test suite documentation helps maintainability. The agent documents what's tested and why.
+  </commentary>
+  </example>
 model: inherit
 color: blue
 tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]

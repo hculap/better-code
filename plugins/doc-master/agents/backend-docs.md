@@ -1,34 +1,34 @@
 ---
 name: backend-docs
-description: Use this agent when the user asks to "document backend", "write backend documentation", "document services", "document server code", "document microservices", "document business logic", or needs documentation for server-side code, services, APIs implementation, data processing, or backend architecture.
+description: |
+  Use this agent when the user asks to "document backend", "write backend documentation", "document services", "document server code", "document microservices", "document business logic", or needs documentation for server-side code, services, APIs implementation, data processing, or backend architecture.
 
-<example>
-Context: User is working on a Node.js backend service
-user: "Document the user service backend"
-assistant: "I'll use the backend-docs agent to create comprehensive documentation for your user service."
-<commentary>
-User explicitly wants backend service documentation. The backend-docs agent specializes in service architecture, data flows, and deployment docs.
-</commentary>
-</example>
+  <example>
+  Context: User is working on a Node.js backend service
+  user: "Document the user service backend"
+  assistant: "I'll use the backend-docs agent to create comprehensive documentation for your user service."
+  <commentary>
+  User explicitly wants backend service documentation. The backend-docs agent specializes in service architecture, data flows, and deployment docs.
+  </commentary>
+  </example>
 
-<example>
-Context: User has completed a new feature in their backend
-user: "I finished the payment processing module, can you document it?"
-assistant: "Let me use the backend-docs agent to document your payment processing module, including the service architecture, data flows, and integration points."
-<commentary>
-Payment processing is backend business logic. The agent will document service structure, error handling, and integration patterns.
-</commentary>
-</example>
+  <example>
+  Context: User has completed a new feature in their backend
+  user: "I finished the payment processing module, can you document it?"
+  assistant: "Let me use the backend-docs agent to document your payment processing module, including the service architecture, data flows, and integration points."
+  <commentary>
+  Payment processing is backend business logic. The agent will document service structure, error handling, and integration patterns.
+  </commentary>
+  </example>
 
-<example>
-Context: Proactive after reviewing backend code
-user: "Review this order processing service"
-assistant: "[After review] I notice there's no documentation for this service. Let me use the backend-docs agent to create documentation covering the service architecture and data flows."
-<commentary>
-Proactive documentation suggestion after code review. Backend services need architecture and flow documentation.
-</commentary>
-</example>
-
+  <example>
+  Context: Proactive after reviewing backend code
+  user: "Review this order processing service"
+  assistant: "[After review] I notice there's no documentation for this service. Let me use the backend-docs agent to create documentation covering the service architecture and data flows."
+  <commentary>
+  Proactive documentation suggestion after code review. Backend services need architecture and flow documentation.
+  </commentary>
+  </example>
 model: inherit
 color: cyan
 tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]

@@ -1,34 +1,34 @@
 ---
 name: compliance-docs
-description: Use this agent when the user asks to "document compliance", "write security documentation", "create audit documentation", "document GDPR", "document SOC2", "document HIPAA", "write regulatory documentation", or needs documentation for compliance requirements, security controls, audit trails, or regulatory adherence.
+description: |
+  Use this agent when the user asks to "document compliance", "write security documentation", "create audit documentation", "document GDPR", "document SOC2", "document HIPAA", "write regulatory documentation", or needs documentation for compliance requirements, security controls, audit trails, or regulatory adherence.
 
-<example>
-Context: User needs compliance documentation
-user: "Create documentation for our SOC2 audit"
-assistant: "I'll use the compliance-docs agent to create SOC2 compliance documentation covering security controls, policies, and evidence collection."
-<commentary>
-Compliance documentation requires specific formats and control mapping. The compliance-docs agent specializes in regulatory documentation.
-</commentary>
-</example>
+  <example>
+  Context: User needs compliance documentation
+  user: "Create documentation for our SOC2 audit"
+  assistant: "I'll use the compliance-docs agent to create SOC2 compliance documentation covering security controls, policies, and evidence collection."
+  <commentary>
+  Compliance documentation requires specific formats and control mapping. The compliance-docs agent specializes in regulatory documentation.
+  </commentary>
+  </example>
 
-<example>
-Context: User is implementing GDPR compliance
-user: "Document our data handling procedures for GDPR"
-assistant: "Let me use the compliance-docs agent to document your GDPR data handling procedures, including data flows, retention policies, and user rights implementation."
-<commentary>
-GDPR documentation requires specific coverage of data subject rights and processing. The agent creates compliant documentation.
-</commentary>
-</example>
+  <example>
+  Context: User is implementing GDPR compliance
+  user: "Document our data handling procedures for GDPR"
+  assistant: "Let me use the compliance-docs agent to document your GDPR data handling procedures, including data flows, retention policies, and user rights implementation."
+  <commentary>
+  GDPR documentation requires specific coverage of data subject rights and processing. The agent creates compliant documentation.
+  </commentary>
+  </example>
 
-<example>
-Context: User needs security documentation
-user: "Document our security controls"
-assistant: "I'll use the compliance-docs agent to create comprehensive security control documentation including implementation details and evidence requirements."
-<commentary>
-Security control documentation supports audits and compliance. The agent documents controls with evidence mapping.
-</commentary>
-</example>
-
+  <example>
+  Context: User needs security documentation
+  user: "Document our security controls"
+  assistant: "I'll use the compliance-docs agent to create comprehensive security control documentation including implementation details and evidence requirements."
+  <commentary>
+  Security control documentation supports audits and compliance. The agent documents controls with evidence mapping.
+  </commentary>
+  </example>
 model: inherit
 color: red
 tools: ["Read", "Glob", "Grep", "Bash", "AskUserQuestion"]
